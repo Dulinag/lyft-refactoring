@@ -1,6 +1,5 @@
 import unittest.TestCase
 from datetime import datetime
-from car import Car
 
 from engine.model.calliope import Calliope
 from engine.model.glissade import Glissade
@@ -12,7 +11,7 @@ from engine.model.thovex import Thovex
 class Car_Factory(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 2)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -47,7 +46,7 @@ class Car_Factory(unittest.TestCase):
 
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 2)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -82,7 +81,7 @@ class Car_Factory(unittest.TestCase):
 
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 5)
+        last_service_date = today.replace(year=today.year - 2)
         warning_light_is_on = False
 
         car = Palindrome(last_service_date, warning_light_is_on)
@@ -90,7 +89,7 @@ class Car_Factory(unittest.TestCase):
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 2)
         warning_light_is_on = False
 
         car = Palindrome(last_service_date, warning_light_is_on)
